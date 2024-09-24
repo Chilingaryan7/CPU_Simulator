@@ -1,3 +1,5 @@
+#ifndef HEADER 
+#define HEADER
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -28,3 +30,4 @@ void pop_regs(int);
 void push_regs(void);
 void wrong_cmd_msg(void);
 int is_number(char *);
+#endif
