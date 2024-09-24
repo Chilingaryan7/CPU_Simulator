@@ -13,6 +13,7 @@ int main(){
             exit(EXIT_FAILURE);
         }
     while(1){
+        fflush(stdin);
         scanf("%s", command_line);
         if(!strcmp(command_line, "START") || !strcmp(command_line, "start")){
             memory.WSR = 1;
