@@ -284,7 +284,7 @@ int main(){
 
                 else if(!strcmp(command_parts[0], "DISC") || !strcmp(command_parts[0], "disc")){
                         if(tokens_count == 1){
-                            strcmp(command_parts[1], "1");
+                            strcpy(command_parts[1], "1");
                         }
 
                         if(tokens_count > 2){
