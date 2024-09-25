@@ -109,7 +109,7 @@ int main(){
                         for(int i = 0; i < REG_COUNT; ++i){
                             if(!strcmp(command_parts[2],regs_name[i])){
                                 opr2 = VALID;
-                                memory.regs[opr1_reg_ind] = memory.regs[i];
+                                opr2_reg_ind = i;
                                     break;
                                 }
                             }                   
@@ -120,14 +120,14 @@ int main(){
                 }
 
                  if (is_number(command_parts[3])){
-                                    memory.regs[opr1_reg_ind] +=  atoi(command_parts[3]);
+                                    memory.regs[opr1_reg_ind] =  memory.regs[opr2_reg_ind] + atoi(command_parts[3]);
                                     opr3 = VALID;
                                 }
                        else {     
                             for(int i = 0; i < REG_COUNT; ++i){
                                     if(!strcmp(command_parts[3],regs_name[i])){
                                         opr3 = VALID;
-                                        memory.regs[opr1_reg_ind] += memory.regs[i];
+                                        memory.regs[opr1_reg_ind] =  memory.regs[opr2_reg_ind] + memory.regs[i];
                                         break;
                                     }
                                 }                   
@@ -160,7 +160,7 @@ int main(){
                         for(int i = 0; i < REG_COUNT; ++i){
                             if(!strcmp(command_parts[2],regs_name[i])){
                                 opr2 = VALID;
-                                memory.regs[opr1_reg_ind] = memory.regs[i];
+                                opr2_reg_ind = i;
                                     break;
                                 }
                             }                   
@@ -171,14 +171,14 @@ int main(){
                 }
 
                  if (is_number(command_parts[3])){
-                                    memory.regs[opr1_reg_ind] -= atoi(command_parts[3]);
+                                    memory.regs[opr1_reg_ind] =  memory.regs[opr2_reg_ind] - atoi(command_parts[3]);
                                     opr3 = VALID;
                                 }
                        else {     
                             for(int i = 0; i < REG_COUNT; ++i){
                                     if(!strcmp(command_parts[3],regs_name[i])){
                                         opr3 = VALID;
-                                        memory.regs[opr1_reg_ind] -= memory.regs[i];
+                                        memory.regs[opr1_reg_ind] = memory.regs[opr2_reg_ind] -  memory.regs[i];
                                         break;
                                     }
                                 }                   
