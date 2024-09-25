@@ -89,7 +89,7 @@ int main(){
                 }
 
                 else if(!strcmp(command_parts[0], "ADD") || !strcmp(command_parts[0], "add")){
-                    if(tokens_count < 4){
+                    if(tokens_count != 4){
                         wrong_cmd_msg();
                         continue;
                     }
@@ -140,7 +140,7 @@ int main(){
                 push_regs();
                 }
                 else if(!strcmp(command_parts[0], "SUB") || !strcmp(command_parts[0], "sub")){
-                    if(tokens_count < 4){
+                    if(tokens_count != 4){
                         wrong_cmd_msg();
                         continue;
                     }                    
