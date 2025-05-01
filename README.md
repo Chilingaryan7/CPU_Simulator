@@ -21,15 +21,15 @@ The project is compiled using a Makefile, which automates the build process.
 🚀 How to Run
 	1.	Open a terminal in the project directory.
 	2.	Run:
+	3. To run the program:
  
-  make
 
   This compiles the code and produces an executable named main.
 
-	3. To run the program:
+  	make
 
-  ./main
+  	./main
 
   4. To clean up compiled files:
 
-  make clean
+  	make clean
